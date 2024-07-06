@@ -1,0 +1,47 @@
+/* Home.css */
+
+body {
+    background-image: url('./Img1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    text-align: center;
+    color: white;
+}
+
+.home-container h1, .home-container h2 {
+    animation: slide 5s infinite alternate; /* Apply animation to h1 and h2 only */
+    color: goldenrod; 
+    font-weight: bold;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex; /* Ensure buttons are displayed in a row */
+    justify-content: center; /* Center align buttons horizontally */
+}
+
+.buttons a {
+    margin-right: 10px; /* Adjust margin between buttons */
+}
+
+.buttons a:last-child {
+    margin-right: 0; /* Remove margin from the last button to prevent extra space */
+}
