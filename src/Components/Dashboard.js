@@ -16,7 +16,7 @@ const Dashboard = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/blogs', {
+      const response = await axios.get('https://blog-project-3-a6uy.onrender.com/api/blogs', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setBlogs(response.data);
@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/blogs/${id}`, {
+      await axios.delete(`https://blog-project-3-a6uy.onrender.com/api/blogs/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       fetchBlogs(); // Refresh the list after deletion
@@ -50,11 +50,11 @@ const Dashboard = () => {
 
     try {
       if (editMode) {
-        await axios.put(`http://localhost:5000/api/blogs/${editBlogId}`, { title, content }, {
+        await axios.put(`https://blog-project-3-a6uy.onrender.com/api/blogs/${editBlogId}`, { title, content }, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
       } else {
-        await axios.post('http://localhost:5000/api/blogs', { title, content }, {
+        await axios.post('https://blog-project-3-a6uy.onrender.com/api/blogs', { title, content }, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
       }

@@ -22,7 +22,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/login', {
+            const response = await axios.post('https://blog-project-3-a6uy.onrender.com/login', {
                 email,
                 password,
             });
