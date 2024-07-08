@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import './Home.css';
 
 const Home = () => {
     return (
-        <div className="bg-gradient-to-r from-violet-200 to-pink-200 min-h-screen">
+        <div className="bg-gradient-to-r from-violet-200 to-pink-200 min-h-screen" >
             {/* Navbar */}
             <nav className="bg-gradient-to-r from-violet-200 to-pink-200 shadow-md">
                 <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
